@@ -15,7 +15,7 @@ public class App
         //System.setProperty("webdriver.chrome.driver", "C://Users//ravee//eclipse-workspace//ChromeDriver//chromedriver-win64//chromedriver.exe");
         WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
-        //chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--headless");
         System.out.println("Test Case is strting");
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("http://54.84.218.205:8085/");
