@@ -15,13 +15,14 @@ public class App
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         //WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
-        //chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--headless");
         System.out.println("Test Case is strting");
         WebDriver driver = new ChromeDriver(chromeOptions);
 	System.out.println("Chromedriver newchro");
         driver.get("http://54.226.78.205:8085/");
 	System.out.println("URL Open");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+	System.out.println("first 3 second wait done URL Open");
         driver.findElement(By.xpath("//*[@id=\"navbarSupportedContent\"]/ul/li[4]/a")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id=\"inputName\"]")).sendKeys("Raveesh");
