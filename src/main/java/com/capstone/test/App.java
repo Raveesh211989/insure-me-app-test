@@ -12,8 +12,8 @@ public class App
    
 	public static void main( String[] args ) throws InterruptedException
     {
-        //System.setProperty("webdriver.chrome.driver", "C://Users//ravee//eclipse-workspace//ChromeDriver//chromedriver-win64//chromedriver.exe");
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        //WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
         System.out.println("Test Case is strting");
