@@ -18,7 +18,7 @@ public class App
         chromeOptions.addArguments("--headless");
         System.out.println("Test Case is strting");
         WebDriver driver = new ChromeDriver(chromeOptions);
-        driver.get("http://3.82.52.104:8085/");
+        driver.get("http://54.226.78.205:8085/");
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"navbarSupportedContent\"]/ul/li[4]/a")).click();
         Thread.sleep(1000);
