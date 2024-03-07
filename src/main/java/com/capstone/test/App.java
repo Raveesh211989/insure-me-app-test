@@ -14,10 +14,10 @@ public class App
     {
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         //WebDriverManager.chromedriver().setup();
-        //ChromeOptions chromeOptions = new ChromeOptions();
+        ChromeOptions chromeOptions = new ChromeOptions();
         //chromeOptions.addArguments("--headless");
         System.out.println("Test Case is strting");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(chromeOptions);
 	System.out.println("Chromedriver newchro");
         driver.get("http://54.226.78.205:8085/");
 	System.out.println("URL Open");
