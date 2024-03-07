@@ -24,8 +24,10 @@ public class App
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	System.out.println("first 3 second wait done URL Open");
         driver.findElement(By.xpath("//*[@id=\"navbarSupportedContent\"]/ul/li[4]/a")).click();
+	System.out.println("contact us seen");
         Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id=\"inputName\"]")).sendKeys("Raveesh");
+	System.out.println("user passed");
         Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id=\"inputNumber\"]")).sendKeys("78787888");
         Thread.sleep(9000);
@@ -34,6 +36,7 @@ public class App
         driver.findElement(By.xpath("//*[@id=\"inputMessage\"]")).sendKeys("How are you");
         Thread.sleep(9000);
         driver.findElement(By.xpath("//*[@id=\"my-button\"]")).click();
+	System.out.println("essage sent received");
         Thread.sleep(9000);
         String response = driver.findElement(By.xpath("//*[@id=\"response\"]")).getText();
         String expectedResponse = "Message Sent";
